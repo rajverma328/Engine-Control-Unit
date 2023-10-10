@@ -20,7 +20,7 @@ enab_rail.addEventListener('change', function() {
 apply.addEventListener('click', function() {
     var control_voltage = parseFloat(t1.value);
     if (isNaN(control_voltage) || control_voltage < t1_minValue || control_voltage > t1_maxValue) {
-        alert("Invalid number value or out of range : Port duration")
+        alert("Invalid number value or out of range : Control Voltage")
         return
     }
     localStorage.setItem("control_voltage", control_voltage);
