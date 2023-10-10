@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <div id = "headin">Diesel Injector Controls</div>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="diesel.css">
+    <div class = "tog" id = "enab">
+        <div class ="text">Enable/Disable</div>
+        <input type="checkbox" id="switch1" /><label for="switch1">Toggle</label>
+    </div>
+
+    <div id = "n1">   
+        <div class ="text1">HV pulse duration (microseconds)</div>
+        <input type="number" id="num1" min="100" max="1000">
+    </div>
+
+    <div id = "n2">   
+        <div class ="text1">LV pulse duration (milliseconds)</div>
+        <input type="number" id="num2" min="0" max="500">
+    </div>
+
+    <div id = "n3">   
+        <div class ="text1">Peak current (A)</div>
+        <input type="number" id="num3" min="0" max="20">
+    </div>
+
+    <div id = "n4">   
+        <div class ="text1">Steady current (A)</div>
+        <input type="number" id="num4" min="0" max="8">
+    </div>
+
+    <div id = "n5">   
+        <div class ="text1">time after TDC (milliseconds)</div>
+        <input type="number" id="num5" min="0" max="500">
+    </div>
+    
+    <button id="Apply">Apply</button>
+    <script src="diesel.js"></script>
+</html>

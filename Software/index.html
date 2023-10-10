@@ -1,0 +1,140 @@
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Dashboard Sidebar Menu</title> 
+</head>
+<!-- Example button -->
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="logo.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">Engine Research Lab</span>
+                    <span class="profession">I.I.T. Kanpur</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link", id = "def">
+                        <a>
+                            <span class="innerlink">dashboard/dashboard.html</span>
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a>
+                            <span class="innerlink">diesel/diesel.html</span>
+                            <i class='bx bx-car icon' ></i>
+                            <span class="text nav-text">Diesel Injector Control</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a>
+                            <span class="innerlink">port/port.html</span>
+                            <i class='bx bx-leaf icon'></i>
+                            <span class="text nav-text">Port Injector Control</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a>
+                            <span class="innerlink">rail/rail.html</span>
+                            <i class='bx bx-injection icon'></i>
+                            <span class="text nav-text">Rail Pressure Control</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="https://www.iitk.ac.in/erl/" target="_blank">
+                        <i class='bx bx-phone-call icon' ></i>
+                        <span class="text nav-text">Contact Us</span>
+                    </a>
+                </li>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Engine Control Unit</div>
+        <iframe id="container" src="dashboard/dashboard.html">
+            <!-- <span id = "D" class ="state_dash">1</span>
+            <span id = "P" class ="state_dash">0</span>
+            <span id = "R" class ="state_dash">0</span> -->
+        </iframe>
+    </section>
+
+    <div id = "navy_logo"> <img src = "navy.png"> </div>
+    <div id = "IITK_logo"> <img src = "iitk.png"> </div>
+
+    <section class="Dial">
+        <div class="ring">
+            <div class = pointer_head id = "pH">
+                <div class = "pointer"> </div>
+            </div>
+            <div class="speed">
+                <div class="number"><span id="output"></span></div>
+                <div class="units">RPM</div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="dropdown" id ="COM">
+        <select id="comPortDropdown">
+            <option value="">Select COM Port</option>
+        </select>
+    </div>
+    <div id = "Port">
+        <input type="checkbox" id="switch1" /><label for="switch1">Toggle</label>
+    </div>
+
+    <div id = "status">
+        <i class='bx bx-link bx-tada' style='color:#64ff00' id ="ok" ></i>
+        <span class = "text" id = "ok">Connected</span>
+        <i class='bx bx-unlink bx-flashing' style='color:#ff3b00' id = "nok" ></i>
+        <span class = "text" id = "nok">Disconnected</span>
+    </div>
+
+    <div id = "n1">   
+        <div class ="text1">Baud Rate</div>
+        <input type="number" id="num1" min="0" max="200000" value = "115200">
+    </div>
+    <a href="https://www.iitk.ac.in/erl/" target="_blank">
+        <button id="closeAppButton">
+            <i class='bx bx-help-circle' style='color:#0561f7' ></i>
+        </button>
+    </a>
+    <pre id="fileContent"></pre>
+    <script src="script.js"></script>
+    <!-- <script src="main.js"></script> -->
+</body>
+</html>

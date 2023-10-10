@@ -1,0 +1,14 @@
+{
+  "name": "software",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}

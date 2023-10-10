@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <div id = "headin">Port Fuel Injector Controls</div>
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="port.css">
+    <div class = "tog" id = "enab">
+        <div class ="text">Enable/Disable</div>
+        <input type="checkbox" id="switch1" /><label for="switch1">Toggle</label>
+    </div>
+
+    <div id = "n1">   
+        <div class ="text1">pulse duration (milliseconds)</div>
+        <input type="number" id="num1" min="100" max="500">
+    </div>
+
+    <div id = "n2">   
+        <div class ="text1">time after TDC (milliseconds)</div>
+        <input type="number" id="num5" min="0" max="500">
+    </div>
+    <button id="Apply">Apply</button>
+    <script src= "port.js"></script>
+</html>

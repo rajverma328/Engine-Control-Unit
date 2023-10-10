@@ -1,0 +1,185 @@
+********************************************************************************
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                  Transient Analysis of P_mosfet_driver                   ***
+***                           9/29/2023 9:57:45 PM                           ***
+********************************************************************************
+Limits
+======
+Maximum Run Time           100u
+Output Start Time (tstart) 0
+Maximum Time Step          0
+Number of Points           51
+Temperature                Linear 27
+Retrace Runs               1
+Run Options                Normal
+State Variables            Zero
+Operating Point            On
+Operating Point Only       Off
+Auto Scale Ranges          On
+Accumulate Plots           Off
+Fixed Time Step            Off
+Periodic Steady State      Off
+Ignore Expression Errors   Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            30.000u  2            12.000   3            12.000  
+4            12.211n  5             0.000  
+
+
+Operating Point for Devices of Type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                Q1
+Using model:          BC547
+
+Beta Terms:
+BETADC              -2.101 
+BETAAC              77.451 
+
+Capacitance Terms:
+CPI                 19.740p
+CMU                  2.561p
+CBX                  0.000 
+CJS                  0.000 
+
+Conductance Terms:
+GM                 232.768f
+
+Current Terms:
+IB                 -12.211p
+IC                  25.660p
+
+Resistance Terms:
+RPI                332.741T
+RX                   0.000 
+RO                 806.400G
+
+Voltage Terms:
+VBE                 12.211n
+VBC                -12.000 
+VCE                 12.000 
+
+Frequency Terms:
+FT                   1.661m
+
+Power DC Terms:
+PD                 307.920p
+PS                   0.000 
+
+DC Pin Currents:
+Ib                 -12.211p
+Ic                  25.660p
+Ie                 -13.449p
+Is                   0.000 
+
+Condition:
+State                   OFF
+
+Device Variables:
+area                 1.000 
+vbe                  0.000 
+vce                  0.000 
+
+
+
+Operating Point for Devices of Type Mosfet PMOS
+===============================================
+Instance:                M1
+Using model:        IRF9540
+
+Capacitance Terms:
+CBD                638.878p
+CBS                  0.000 
+CGSOVL             266.918p
+CGDOVL             885.030p
+CGBOVL               0.000 
+CGS                  0.000 
+CGD                  0.000 
+CGB                  0.000 
+
+Conductance Terms:
+GM                   0.000 
+GDS                  0.000 
+GMBS                 0.000 
+
+Current Terms:
+ID                 -30.000u
+
+Voltage Terms:
+VGS                -12.830n
+VDS                -12.000 
+VBS                  0.000 
+VGB                -12.830n
+VGD                 12.000 
+VDB                -12.000 
+VTH                 -2.499 
+VDSAT                0.000 
+
+Power DC Terms:
+PD                 359.998u
+PS                   0.000 
+
+DC Pin Currents:
+Ig                   0.000 
+Id                 -30.000u
+Is                  30.000u
+Ib                  12.010p
+
+Condition:
+State                   OFF
+
+Device Variables:
+m                    1.000 
+l                    0.000 
+w                    0.000 
+ad                   0.000 
+as                   0.000 
+pd                   0.000 
+ps                   0.000 
+nrd                  0.000 
+nrs                  0.000 
+nrb                  0.000 
+nrg                  0.000 
+vds                  0.000 
+vgs                  0.000 
+vbs                  0.000 
+
+
+
+Operating Point for Devices of Type Resistor
+============================================
+Instance:                 R1             R2             R3
+V                   -30.000u       -12.830n       -12.211n
+Power DC Terms:
+PD                  899.995p     3.292E-019     1.491E-019
+
+DC Pin Currents:
+Ir                  -30.000u       -25.660p       -12.211p
+
+Device Variables:
+tc1                   0.000          0.000          0.000 
+tc2                   0.000          0.000          0.000 
+
+
+
+Operating Point for Devices of Type SPICE Source
+================================================
+Instance:                V1             V2
+V                   12.000          0.000 
+Power DC Terms:
+PG                 359.999u         0.000 
+
+DC Pin Currents:
+ISource            -30.000u        12.211p
+
+
