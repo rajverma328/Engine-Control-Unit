@@ -25,10 +25,6 @@
 }
 
 body{
-    width: 1920px; /* Adjust as needed */
-    height: 1080px; /* Adjust as needed */
-    margin: 0 auto;
-    transform-origin: top left;
     background-color: var(--body-color);
     transition: var(--tran-05);
     overflow: hidden;
@@ -245,13 +241,13 @@ header .image-text .profession{
 .Dial{
     position: absolute;
     top : 100px;
-    right :450px;
+    left : 1010px;
 }
 
 .Dial .ring {
     position: absolute;
-    width: 50vmin;
-    height: 50vmin;
+    width: 400px;
+    height: 400px;
     background-image: radial-gradient(green 0, green 50%, transparent 50%, transparent 100%),radial-gradient(red 0, red 50%, transparent 50%, transparent 100%), radial-gradient(#ffd5b6 0, #ffd5b6 60%, transparent 60%), conic-gradient(orange 0, red 130deg, #ffd5b6 130deg, #ffd5b6 230deg, green 230deg, orange 360deg);
     background-size: 11% 11%, 11% 11%, 100% 100%, 100% 100%;
     background-repeat: no-repeat;
@@ -262,18 +258,18 @@ header .image-text .profession{
   }
 .Dial .ring .pointer_head{
     position: absolute;
-    width: 50vmin;
-    height: 50vmin;
+    width: 400px;
+    height: 400px;
 }
 .Dial .ring .pointer_head .pointer {
     position: inherit;
-    top: -3vmin;
-    left: 22.5vmin;
-    width: 4vmin;
-    height: 9vmin;
+    top: -15px;
+    left: 180px;
+    width: 30px;
+    height: 60px;
     border-style: solid;
-    border-width: 0.5vmin;
-    border-radius: 2vmin;
+    border-width: 3px;
+    border-radius: 15px;
     background-color: white;
     
 }
@@ -289,11 +285,11 @@ header .image-text .profession{
 }
 
 .Dial .speed .number {
-    font-size: 10vmin;
+    font-size: 80px;
 }
 
 .Dial .speed .units {
-    font-size: 6vmin;
+    font-size: 50px;
 }
 
 .innerlink{
