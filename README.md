@@ -70,5 +70,5 @@ This ECU system is open-source software released under the [MIT License](LICENSE
 
 ---
 
-Thank you for your interest in the Engine Control Unit developed at the Engine Research Laboratory (ERL), IIT Kanpur. If you have any questions or would like to collaborate, please don't hesitate to [contact us](mailto:akag@iitk.ac.in).
+Thank you for your interest in the Engine Control Unit developed at the Engine Research Laboratory (ERL), IIT Kanpur. If you have any questions or would like to collaborate, please don't hesitate to [contact us](mailto:akag@iitk.ac.in)
 
