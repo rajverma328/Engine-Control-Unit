@@ -42,6 +42,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const option = document.createElement('option');
                 option.textContent = item;
                 dropdown.appendChild(option);
+                // console.log(item)
             });
         })
         .catch(error => {
