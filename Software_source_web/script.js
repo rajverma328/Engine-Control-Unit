@@ -7,11 +7,17 @@ const body = document.querySelector('body'),
 var pointer = document.getElementById("pH");
 var outele = document.getElementById("output");
 
+tester = document.getElementById("switch1");
+
 let dashboard = document.getElementById("def");
 
 dashboard.style.backgroundColor = 'rgb(217, 217, 217)';
 dashboard.style.borderRadius = '40px';
-    
+
+const { exec } = require('child_process');
+const fs = require('fs');
+const testScript = 'tester.py'; // Replace with your Python script filename
+
 toggle.addEventListener("click" , () =>{
     sidebar.classList.toggle("close");
 })
@@ -58,6 +64,48 @@ comPortDropdown.addEventListener('change', function () {
 });
 console.log(selectedValue)
 
+BR = document.getElementById("num1");
+okk = document.getElementById("ok");
+nokk = document.getElementById("nok");
+okkt= document.getElementById("okt");
+nokkt = document.getElementById("nokt");
+BaudRate = BR.value;
+
+tester.addEventListener('change', function() {
+    if (this.checked) {
+    var inputString = selectedValue+"_"+BaudRate; // Replace with your input string
+        exec(`python3 ${testScript} "${inputString}"`, (error, stdout, stderr) => {
+            if (error) {
+                console.error(`Error: ${error}`);
+                return;
+            }
+            stdout = parseInt(stdout)
+            console.log(stdout)
+            if(stdout == 0){
+                okk.style.display = "none"
+                okkt.style.display = "none"
+                nokk.style.display = "inline"
+                nokkt.style.display = "inline"
+            }
+            else{
+                nokk.style.display = "none"
+                nokkt.style.display = "none"
+                okk.style.display = "inline"
+                okkt.style.display = "inline"
+            }
+        });
+    }
+    else{
+        okk.style.display = "none"
+        okkt.style.display = "none"
+        nokk.style.display = "inline"
+        nokkt.style.display = "inline"
+    }
+});
+
+
+
+
 RPM = 0;
 
 outele.textContent = RPM;
@@ -65,8 +113,8 @@ var angle = (RPM/3000)*260 - 130;
 var str = 'rotate(' + angle + 'deg)';
 pointer.style.transform = str;
 
-const { exec } = require('child_process');
-const fs = require('fs');
+
+//should be at the very bottom just in case user refresh the screen 
 const pythonScriptPath = 'COM.py';
 const outputFilePath = 'output.txt';
 const childProcess = exec(`python3 ${pythonScriptPath} > ${outputFilePath}`, (error, stdout, stderr) => {
@@ -83,3 +131,5 @@ const childProcess = exec(`python3 ${pythonScriptPath} > ${outputFilePath}`, (er
 childProcess.on('exit', (code) => {
   console.log(`Python script exited with code ${code}`);
 });
+
+

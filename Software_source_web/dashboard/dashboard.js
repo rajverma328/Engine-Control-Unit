@@ -42,5 +42,4 @@ apply.addEventListener('click', function() {
 });
 // console.log("hello")
 
-
 // console.log(localStorage.getItem("diesel_cond"))

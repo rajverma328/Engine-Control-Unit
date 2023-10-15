@@ -404,6 +404,14 @@ input[type=checkbox]{
     display:inline;
   }
 
+  #okt{
+    display: none;
+  }
+
+  #nokt{
+    display:inline;
+  }
+
 #n1{
     position: absolute;
     top:460px;
@@ -443,3 +451,25 @@ input[type=checkbox]{
 #closeAppButton:hover {
     cursor: pointer;
 }
+
+#Send {
+    position: absolute;
+    top : 620px;
+    left : 1140px;
+    padding: 3px 10px;
+    font-size: 30px;
+    font-weight: 500;
+    background-color: #f47f25;
+    color: #d4d4d4;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    /* z-index: 999; */
+  }
+  
+  #Send:hover {
+    background-color: #f47f25bc;
+    color: #ffffff;
+    box-shadow: #ffffff;
+    /* z-index: 999; */
+  }
