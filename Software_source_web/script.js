@@ -65,3 +65,21 @@ var angle = (RPM/3000)*260 - 130;
 var str = 'rotate(' + angle + 'deg)';
 pointer.style.transform = str;
 
+const { exec } = require('child_process');
+const fs = require('fs');
+const pythonScriptPath = 'COM.py';
+const outputFilePath = 'output.txt';
+const childProcess = exec(`python3 ${pythonScriptPath} > ${outputFilePath}`, (error, stdout, stderr) => {
+  if (error) {
+    console.error(`Error: ${error.message}`);
+    return;
+  }
+  if (stderr) {
+    console.error(`Python script error: ${stderr}`);
+    return;
+  }
+  console.log(`Python script output has been written to ${outputFilePath}`);
+});
+childProcess.on('exit', (code) => {
+  console.log(`Python script exited with code ${code}`);
+});
